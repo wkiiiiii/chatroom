@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: simple-chatroom
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 10000
+    autoDeploy: true 
